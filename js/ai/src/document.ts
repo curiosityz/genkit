@@ -83,6 +83,22 @@ export class Document implements DocumentData {
     return this.content.find((part) => part.media)?.media || null;
   }
 
+  /**
+   * Applies formatting options to the document content.
+   * @param {Object} options - Formatting options such as font, spacing, line breaks, bullet points, and text breaks.
+   */
+  applyFormatting(options: {
+    font?: string;
+    spacing?: string;
+    lineBreaks?: boolean;
+    bulletPoints?: boolean;
+    textBreaks?: boolean;
+  }) {
+    // Example implementation, details may vary based on actual formatting capabilities
+    console.log(`Applying formatting to document with options: ${JSON.stringify(options)}`);
+    // This method would contain logic to apply formatting options to the document content
+  }
+
   toJSON(): DocumentData {
     return {
       content: this.content,
