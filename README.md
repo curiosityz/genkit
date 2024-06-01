@@ -109,3 +109,32 @@ Please use our GitHub [issue tracker](https://github.com/firebase/genkit/issues)
 You can also reach out to us using the GitHub [discussion](https://github.com/firebase/genkit/discussions) forums.
 
 Firebase Genkit Team
+
+## Document Formatting Feature
+
+Firebase Genkit now includes an AI-based document formatting feature that leverages AI models to auto-magically format documents and books. This feature supports various document types, including books, with customizable formatting options. Users can input raw text or documents and receive well-formatted output, similar to the service mentioned.
+
+### How to Use the Document Formatting Feature
+
+To use the document formatting feature, you can call the `formatDocument` function from `js/ai/src/generate.ts`. Here's an example of how to format a document:
+
+```javascript
+import { formatDocument } from 'genkit/ai';
+
+const rawText = "Your raw text or document content here...";
+const formattingOptions = {
+  font: 'Times New Roman',
+  spacing: '1.5',
+  lineBreaks: true,
+  bulletPoints: true,
+  textBreaks: true,
+  colorBox: { color: 'blue', overlay: 'light' },
+  attentionIcon: true
+};
+
+formatDocument(rawText, formattingOptions).then(formattedDocument => {
+  console.log(formattedDocument);
+});
+```
+
+This feature makes smart and intelligent planning choices for formatting, including font, spacing

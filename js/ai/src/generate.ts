@@ -752,3 +752,15 @@ export async function generateStream<
     }
   );
 }
+
+/**
+ * Formats a document or book using AI models.
+ * 
+ * This function leverages AI models to auto-magically format documents and books,
+ * providing well-formatted output similar to the service mentioned.
+ * 
+ * @param {string | DocumentData} input - The raw text or document data to format.
+ * @param {Object} options - Formatting options, such as font, spacing, line breaks, bullet points, and text breaks.
+ * @returns {Promise<DocumentData>} The formatted document data.
+ */
+export async function formatDocument(input: string | DocumentData, options: Object
